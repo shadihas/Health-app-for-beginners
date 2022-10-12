@@ -59,8 +59,7 @@ class _MainPageState extends State<MainPage> {
                 hintText: 'Height (m)',
                 hintStyle: TextStyle(
                   color: Colors.yellow,
-                  fontSize: 20,
-                  
+                  fontSize: 20,   
                 ),
                 border: InputBorder.none,
               
@@ -86,8 +85,7 @@ class _MainPageState extends State<MainPage> {
                 hintText: 'Weight (kg)',
                 hintStyle: TextStyle(
                   color: Colors.yellow,
-                  fontSize: 20,
-                  
+                  fontSize: 20,    
                 ),
                 border: InputBorder.none,
               
@@ -103,24 +101,20 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
         ],),
-        SizedBox(height: 20,),
-        
-        
+        SizedBox(height: 20,), 
         Center(child:GestureDetector(onTap: (){
           setState(() {
            double _h = double.parse(_heightController.text);
             double _w = double.parse(_weightController.text);
             _bmiresult = _w/(_h*_h);
-          if(_bmiresult > 25){
-            _testResult = 'you are over weight';}
-             else if(_bmiresult>=18.5 && _bmiresult<=25 ) {
+          if(_bmiresult > 22){
+            _testResult = 'you are over weight';
+            }
+             else if(_bmiresult>=18.5 && _bmiresult<=22 ) {
                _testResult = 'you have normal weight';
             
-            }else{_testResult = 'you are under weight';}
-          
-
-            
-          
+            }else{_testResult = 'you are under weight';
+            } 
           });
         },
           child: Text('Calculator',style: TextStyle(color: Colors.yellow, fontSize: 30),))),
