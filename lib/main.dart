@@ -107,12 +107,11 @@ class _MainPageState extends State<MainPage> {
            double _h = double.parse(_heightController.text);
             double _w = double.parse(_weightController.text);
             _bmiresult = _w/(_h*_h);
-          if(_bmiresult > 22){
+          if(_bmiresult > 24){
             _testResult = 'you are over weight';
             }
-             else if(_bmiresult>=18.5 && _bmiresult<=22 ) {
-               _testResult = 'you have normal weight';
-            
+             else if(_bmiresult>=18.5 && _bmiresult<=24 ) {
+               _testResult = 'you have normal weight'; 
             }else{_testResult = 'you are under weight';
             } 
           });
